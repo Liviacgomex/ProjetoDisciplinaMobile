@@ -20,9 +20,10 @@
         tools:layout_editor_absoluteY="414dp" />
 
     <ListView
-        android:id="@+id/listaTarefas"
+        android:id="@+id/listaSeries"
         android:layout_width="0dp"
         android:layout_height="495dp"
+        android:footerDividersEnabled="true"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="8dp" />
 

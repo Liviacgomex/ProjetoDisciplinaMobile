@@ -1,6 +1,7 @@
 package com.example.casa.mobile
 
 import android.app.Activity
+import android.widget.ArrayAdapter
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -14,18 +15,23 @@ class Detalhes : AppCompatActivity() {
 
 
         botaoAdd.setOnClickListener {
-            val tarefa = campoTarefa.text.toString();
-            val status = campoStatus.text.toString().toBoolean();
-            val prazo = campoData.text.toString();
-            val detalhes = campoDetalhes.text.toString();
-            val Tarefa = Tarefa(tarefa, status, prazo, detalhes);
+            val nome = campoSerie.text.toString();
+            val episodio = campoEpisodio.text.toString();
+            val temporada = campoTemporada.text.toString();
+
+            var Serie = Serie(nome, episodio, temporada)
 
             val intent = Intent()
-            intent.putExtra("tarefa", Tarefa);
+            intent.putExtra(EXTRA_PERSON, Serie);
             setResult(Activity.RESULT_OK, intent)
             finish()
 
         }
-
     }
+
+    companion object{
+        val EXTRA_PERSON = "series"
+    }
+
+
 }

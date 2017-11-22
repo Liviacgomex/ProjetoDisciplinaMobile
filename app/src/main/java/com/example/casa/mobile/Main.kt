@@ -4,7 +4,9 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_mobile.*
+
 
 class Main : AppCompatActivity() {
 
@@ -20,6 +22,11 @@ class Main : AppCompatActivity() {
             startActivityForResult(intent, REQUEST_INSERT)
         }
 
+        listaSeries.setOnItemClickListener { _, _, position, _ ->
+            Toast.makeText(this, series[position].serie, Toast.LENGTH_SHORT).show()
+
+        }
+
         val adapter = ArrayAdapter<Serie>(this, android.R.layout.simple_list_item_1, series)
         listaSeries.adapter = adapter
 
@@ -31,6 +38,7 @@ class Main : AppCompatActivity() {
             val serie = data?.getSerializableExtra(Detalhes.EXTRA_PERSON) as? Serie
             if(serie != null){
                 series.add(serie)
+                series.sortedBy { it.serie }
                 adapter?.notifyDataSetChanged()
             }
         }

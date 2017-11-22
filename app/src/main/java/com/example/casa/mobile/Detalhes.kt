@@ -9,10 +9,10 @@ import kotlinx.android.synthetic.main.activity_detalhes.*
 
 class Detalhes : AppCompatActivity() {
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detalhes)
-
 
         botaoAdd.setOnClickListener {
             val nome = campoSerie.text.toString();
@@ -27,11 +27,11 @@ class Detalhes : AppCompatActivity() {
             finish()
 
         }
+
     }
 
     companion object{
         val EXTRA_PERSON = "series"
     }
-
 
 }

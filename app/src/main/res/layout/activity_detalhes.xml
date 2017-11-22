@@ -4,13 +4,26 @@
     android:layout_height="match_parent"
     android:weightSum="1">
 
+    <TextView
+        android:id="@+id/textoSerie"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Série:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
     <EditText
         android:id="@+id/campoSerie"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="text"
-        android:text="Serie" />
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/textoEpisodio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Episódio ou Parte:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <EditText
         android:id="@+id/campoEpisodio"
@@ -18,16 +31,21 @@
         android:layout_height="wrap_content"
         android:layout_weight="0.06"
         android:ems="10"
-        android:inputType="text"
-        android:text="Episodio" />
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/textoTemporada"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Temporada:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <EditText
         android:id="@+id/campoTemporada"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="text"
-        android:text="Temporada" />
+        android:inputType="text" />
 
 
     <Button
